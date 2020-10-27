@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_weight="3.8" >
+
+        <Button
+            android:focusedByDefault="true"
+            android:text="All channels"
+            android:textSize="15sp"
+            android:id="@+id/btnAllChannels"
+            android:nextFocusUp="@id/btnAllChannels"
+            android:padding="0dp"
+            android:nextFocusDown="@id/btnFavouriteChannels"
+            android:nextFocusRight="@id/rvChannels"
+            android:layout_width="80dp"
+            android:layout_height="40dp"/>
+        <Button
+            android:id="@+id/btnFavouriteChannels"
+            android:nextFocusRight="@id/rvChannels"
+            android:nextFocusUp="@id/btnAllChannels"
+            android:nextFocusDown="@id/btnScroll"
+            android:text="Favourite Channels"
+            android:textSize="15sp"
+            android:padding="0dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"/>
+
+        <Button
+            android:id="@+id/btnScroll"
+            android:text="Scroll"
+            android:nextFocusRight="@id/rvChannels"
+            android:nextFocusDown="@id/btnScroll"
+            android:nextFocusUp="@id/btnFavouriteChannels"
+            android:layout_width="80dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.8" >
+
+        <app.com.tvrecyclerview.TvRecyclerView
+            android:id="@+id/rvChannels"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nextFocusRight="@id/rvChannelProgram"
+            android:nextFocusUp="@id/rvChannels"
+            android:nextFocusDown="@id/rvChannels"
+            android:nextFocusLeft="@id/btnAllChannels"
+            android:clipChildren="false"
+            android:clipToPadding="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="2" >
+
+        <FrameLayout
+            android:id="@+id/videoPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <app.com.tvrecyclerview.TvRecyclerView
+            android:id="@+id/rvChannelProgram"
+            android:nextFocusLeft="@id/rvChannels"
+            android:nextFocusDown="@id/rvChannelProgram"
+            android:nextFocusUp="@id/rvChannelProgram"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

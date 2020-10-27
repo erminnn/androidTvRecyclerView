@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F19918"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/tvChannelName"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text="ERMIN"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:layout_width="match_parent" />
+</FrameLayout>
